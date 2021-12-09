@@ -14,6 +14,10 @@ app.use(cors());
 
 app.use('/posts', postRouter);
 
+app.get('/', (req, res) => {
+  res.send('Hello to memories API');
+});
+
 // const CONNECTION_URL = 'mongodb+srv://bagas:persikabo1@cluster0.btob1.mongodb.net/memories?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 
